@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Customerone from './Pages/Customer';
 import Progressone from './Pages/Progress';
@@ -6,6 +7,10 @@ import { Button } from 'antd/es/radio';
 import Footercopy from './Layouts/Footer';
 //import Profile from './Layouts/Profile';
 import Oneslider from './Component/Slider';
+import TestFunction from './SampleArun';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import HomeTestFunc from './Home';
+import LayoutJs from './Layout';
 function App(){
   return(
     <>
@@ -31,6 +36,20 @@ function App(){
     <div>
       <Oneslider></Oneslider>
     </div>
+
+      <div>
+          <h3>
+            This the colabrate file Arun
+          </h3>
+        </div>
+        <TestFunction></TestFunction>
+        <HashRouter>
+          <Routes>
+            <Route  path='/' element={<LayoutJs></LayoutJs>}>
+              <Route index element={<HomeTestFunc></HomeTestFunc>}/>
+            </Route>
+          </Routes>
+        </HashRouter>
       
     </>
   )
